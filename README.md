@@ -5,6 +5,8 @@
 
 Skill Connect is a dynamic and responsive job search platform designed to connect job seekers with employers. Built using a blend of modern technologies like HTML, CSS (Bootstrap), JavaScript (jQuery, AJAX), PHP, MySQL, and others, it offers an interactive, user-friendly interface for both job seekers and employers. The platform includes a rich feature set for managing profiles, job applications, job postings, and much more.
 
+---
+
 ## Features
 
 ### **Job Seeker Dashboard**:
@@ -47,6 +49,10 @@ Skill Connect is a dynamic and responsive job search platform designed to connec
 
 ### **Authentication and Authorization**:
 - **GitHub Login Integration**: Job seekers and employers can log in using their GitHub accounts, streamlining registration and login, especially for tech talent.
+
+### **Forgot Password & Email Integration**:
+- **PHPMailer**: Used for sending emails, including notifications and application responses.
+- **Google SMTP Server**: Utilized for sending password reset emails, making the recovery process easy and secure.
 
 ### **Weather API Integration**:
 - Displays real-time weather information for a selected city.
@@ -154,6 +160,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **GitHub OAuth** for user authentication.
 - **OpenWeatherAPI** for weather data integration.
 
----
-
-This should provide a clear, detailed README for users and contributors interested in your project. Let me know if you'd like further adjustments!
