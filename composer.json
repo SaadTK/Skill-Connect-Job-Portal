@@ -1,0 +1,22 @@
+{
+    "name": "saadt/skill_connect_project",
+    "description": "A job portal. Doing for NSU. University project.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Saadt\\SkillConnectProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Saad",
+            "email": "tahmid.saad@northsouth.edu"
+        }
+    ],
+    "require": {
+        "stripe/stripe-php": "^16.2",
+        "predis/predis": "^2.3",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

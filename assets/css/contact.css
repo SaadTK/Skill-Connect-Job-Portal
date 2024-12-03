@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    padding-top: 76px;
+}
+
+.container1 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 650px;
+    margin: 60px auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.1);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.send-button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.send-button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+}
+
+.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    animation: fadeIn 0.5s ease;
+}
+
+.success {
+    color: #28a745;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    animation: fadeIn 0.5s ease;
+}
+
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.contact-info i {
+    color: #007bff;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-info i:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+main {
+    padding-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container1 {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .form-group {
+        padding: 0 10px;
+    }
+}
