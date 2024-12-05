@@ -80,7 +80,7 @@ Skill Connect is a dynamic and responsive job search platform designed to connec
 ---
 
 ## Demo Link
-Check out the live demo at [Skill Connect Job Portal](https://skillconnect.webhop.me).
+Check out the live demo at [Skill Connect Job Portal](http://skillconnect.webhop.me).
 
 ---
 
