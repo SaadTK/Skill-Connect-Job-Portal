@@ -170,4 +170,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Redis** for caching.
 - **GitHub OAuth** for user authentication.
 - **OpenWeatherAPI** for weather data integration.
- this is the github's README use the html tags like h1, h2, p, br, hr, b, i li, ul and so on to make this look good
+
