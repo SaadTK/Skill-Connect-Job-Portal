@@ -1,0 +1,32 @@
+/* Shrink animation on click */
+.btn-outline-success:active {
+    animation: shrink 0.1s ease-out;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+/* Hover animation */
+.btn-outline-success:hover {
+    animation: pulse 0.6s ease-out;
+    background-color: #28a745; /* Changes color on hover */
+    color: #fff;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
