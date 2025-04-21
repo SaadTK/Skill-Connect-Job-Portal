@@ -10,17 +10,13 @@ if (isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Robots Meta Tag -->
     <meta name="robots" content="index, follow" />
-
-    <!-- Theme Color -->
     <meta name="theme-color" content="#007bff" />
 
-    <!-- OG Meta Tags -->
     <meta property="og:title" content="Skill Connect - Find Your Dream Job in Bangladesh." />
     <meta property="og:description"
         content="Discover top job opportunities in Bangladesh. Skill Connect helps you find roles across IT, Healthcare, Marketing, and more. Start your career journey today!" />
@@ -37,35 +33,30 @@ if (isset($_SESSION['user_id'])) {
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Skill Connect" />
 
-
     <title>Skill Connect - Find Your Dream Job in Bangladesh</title>
 
-
-
-    <!-- Bootstrap from Google CDN-->
+    <!-- Bootstrap from google-->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" as="style"
         onload="this.rel='stylesheet'"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
-
-    <!-- Custom CSS (preload critical CSS) -->
+    <!-- Custom CSS  -->
     <link rel="preload" href="assets/css/index.css" as="style" onload="this.rel='stylesheet'">
 
     <!-- Preload Hero Carousel Images -->
     <link rel="preload" href="assets/img/hero/carousol1.jpg" as="image">
     <link rel="preload" href="assets/img/hero/carousol3.jpg" as="image">
 
-    <!-- Bootstrap JS (preload for faster loading) from jsDelivr CDN -->
+    <!-- Bootstrap JS (preload) -->
     <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
         as="script">
 
-    <!-- Preload Google Fonts -->
+    <!-- Google Fonts (Preload) -->
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap"
         as="style" onload="this.rel='stylesheet'">
 
-    <!-- jQuery (preload for faster loading) from Google CDN -->
+    <!-- jQuery (preload) from google -->
     <link rel="prefetch" href="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" as="script">
 
     <style>
@@ -105,19 +96,16 @@ if (isset($_SESSION['user_id'])) {
 
     <main class="container mt-4">
 
-
-
-
         <!-- Hero Section with Carousel -->
         <div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <!-- First Carousel Item -->
                 <div class="carousel-item active" style="height: 500px;">
                     <picture>
-                        <!-- Small screen image -->
+                        <!-- For small screen image -->
                         <source srcset="assets/img/hero/carousol1.webp" media="(max-width: 768px)" type="image/webp">
                         <source srcset="assets/img/hero/carousol1.jpg" media="(max-width: 768px)" type="image/jpeg">
-                        <!-- Large screen image -->
+                        <!-- For large screen image -->
                         <source srcset="assets/img/hero/carousol1.webp" type="image/webp">
                         <img rel="prefetch" src="assets/img/hero/carousol1.jpg" alt="Find Your Dream Job in Bangladesh"
                             class="d-block w-100" style="height: 500px; object-fit: cover;">
@@ -132,10 +120,10 @@ if (isset($_SESSION['user_id'])) {
                 <!-- Second Carousel Item -->
                 <div class="carousel-item" style="height: 500px;">
                     <picture>
-                        <!-- Small screen image -->
+                        <!-- For small screen image -->
                         <source srcset="assets/img/hero/carousol2.webp" media="(max-width: 768px)" type="image/webp">
                         <source srcset="assets/img/hero/carousol2.jpg" media="(max-width: 768px)" type="image/jpeg">
-                        <!-- Large screen image -->
+                        <!-- For large screen image -->
                         <source srcset="assets/img/hero/carousol2.webp" type="image/webp">
                         <img rel="prefetch" src="assets/img/hero/carousol2.jpg" alt="Find Your Favorite Job"
                             class="d-block w-100" style="height: 500px; object-fit: cover;">
@@ -150,10 +138,10 @@ if (isset($_SESSION['user_id'])) {
                 <!-- Third Carousel Item -->
                 <div class="carousel-item" style="height: 500px;">
                     <picture>
-                        <!-- Small screen image -->
+                        <!-- For small screen image -->
                         <source srcset="assets/img/hero/carousol3.webp" media="(max-width: 768px)" type="image/webp">
                         <source srcset="assets/img/hero/carousol3.jpg" media="(max-width: 768px)" type="image/jpeg">
-                        <!-- Large screen image -->
+                        <!-- For large screen image -->
                         <source srcset="assets/img/hero/carousol3.webp" type="image/webp">
                         <img rel="prefetch" src="assets/img/hero/carousol3.jpg" alt="Boost Your Career"
                             class="d-block w-100" style="height: 500px; object-fit: cover;">
@@ -249,53 +237,53 @@ if (isset($_SESSION['user_id'])) {
 
         <br>
 
-       <!-- frequented jobs are cached and displayed here -->
-<div class="frequently-visited-jobs bg-light">
-    <h2 style="text-align: center;">Top 5 Jobs</h2>
-    <br>
-    <div id="job-container" class="row">
-        <!-- Job container will be populated with AJAX -->
-    </div>
-</div>
+        <!-- frequented jobs are cached and displayed here -->
+        <div class="frequently-visited-jobs bg-light">
+            <h2 style="text-align: center;">Top 5 Jobs</h2>
+            <br>
+            <div id="job-container" class="row">
+                <!-- Job container will be populated with AJAX -->
+            </div>
+        </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        const jobsApiUrl = 'cache.php';
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                const jobsApiUrl = 'cache.php';
 
-        // Check if the jobs data is available in the browser cache (localStorage or sessionStorage)
-        if (localStorage.getItem('frequently_visited_jobs')) {
-            // Retrieve jobs from the browser cache (localStorage)
-            const cachedJobs = JSON.parse(localStorage.getItem('frequently_visited_jobs'));
-            displayJobs(cachedJobs);
-        } else {
-            // Fetch frequently visited jobs from the server
-            $.ajax({
-                url: jobsApiUrl,
-                method: 'GET',
-                dataType: 'json', // Expect JSON from the server
-                success: function (data) {
-                    if (Array.isArray(data.data)) {
-                        // Cache the jobs in localStorage for future use
-                        localStorage.setItem('frequently_visited_jobs', JSON.stringify(data.data));
-                        displayJobs(data.data); // Pass array to display function
-                    } else if (data.error) {
-                        $('#job-container').html(`<p class="text-center">${data.error}</p>`);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    console.error("AJAX Error:", error, xhr.responseText);
-                    $('#job-container').html("<p class='text-danger text-center'>Error fetching jobs from the server.</p>");
+                // Check if the jobs data is available in the browser cache (localStorage or sessionStorage)
+                if (localStorage.getItem('frequently_visited_jobs')) {
+                    // Retrieve jobs from the browser cache (localStorage)
+                    const cachedJobs = JSON.parse(localStorage.getItem('frequently_visited_jobs'));
+                    displayJobs(cachedJobs);
+                } else {
+                    // Fetch frequently visited jobs from the server
+                    $.ajax({
+                        url: jobsApiUrl,
+                        method: 'GET',
+                        dataType: 'json', // Expect JSON from the server
+                        success: function(data) {
+                            if (Array.isArray(data.data)) {
+                                // Cache the jobs in localStorage for future use
+                                localStorage.setItem('frequently_visited_jobs', JSON.stringify(data.data));
+                                displayJobs(data.data); // Pass array to display function
+                            } else if (data.error) {
+                                $('#job-container').html(`<p class="text-center">${data.error}</p>`);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("AJAX Error:", error, xhr.responseText);
+                            $('#job-container').html("<p class='text-danger text-center'>Error fetching jobs from the server.</p>");
+                        }
+                    });
                 }
-            });
-        }
 
-        // Function to display jobs
-        function displayJobs(jobs) {
-            $('#job-container').empty(); // Clear previous jobs
-            if (jobs.length > 0) {
-                jobs.forEach(job => {
-                    const jobCard = `
+                // Function to display jobs
+                function displayJobs(jobs) {
+                    $('#job-container').empty(); // Clear previous jobs
+                    if (jobs.length > 0) {
+                        jobs.forEach(job => {
+                            const jobCard = `
                     <div class="col-md-6 mb-4 job-card">
                         <div class="card shadow-sm">
                             <div class="card-body">
@@ -307,20 +295,18 @@ if (isset($_SESSION['user_id'])) {
                             </div>
                         </div>
                     </div>`;
-                    $('#job-container').append(jobCard);
-                });
-            } else {
-                $('#job-container').html("<p class='text-center'>No frequently visited jobs found.</p>");
-            }
-        }
-    });
-</script>
+                            $('#job-container').append(jobCard);
+                        });
+                    } else {
+                        $('#job-container').html("<p class='text-center'>No frequently visited jobs found.</p>");
+                    }
+                }
+            });
+        </script>
 
 
         <!-- Testimonials Section -->
         <?php include 'display_testimonials.php'; ?>
-
-
 
     </main>
 
@@ -328,13 +314,12 @@ if (isset($_SESSION['user_id'])) {
     <?php include 'footer.php'; ?>
 
     <script>
-
         // Fetch and Display Statistics Data
         $.ajax({
             url: 'fetch_stats.php',
             method: 'GET',
             dataType: 'json',
-            success: function (data) {
+            success: function(data) {
                 if (!data.error) {
                     $('#jobsPosted').text(data.jobsPosted + '+');
                     $('#candidatesPlaced').text(data.candidatesPlaced + '+');
@@ -343,7 +328,7 @@ if (isset($_SESSION['user_id'])) {
                     console.error(data.error);
                 }
             },
-            error: function (xhr, status, error) {
+            error: function(xhr, status, error) {
                 console.error('AJAX Error: ' + error);
             }
         });
